@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Black Jack">
+      <UniqueIdentifier>{6b2afe2c-4f53-4d67-a70d-d5f34f2fae81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Black Jack\Header Files">
+      <UniqueIdentifier>{b01db75a-25c8-4e74-af28-fb819cfd76b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Black Jack\Source Files">
+      <UniqueIdentifier>{69f5f95a-4451-4536-b3fe-3f15b4545ba1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Snake">
+      <UniqueIdentifier>{9815a2da-6b34-4e7f-b134-6df8bd557f7d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GuessTheNumber.cpp">
@@ -27,6 +39,15 @@
     <ClCompile Include="HangMan.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="BeerRun.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BlackJack.cpp">
+      <Filter>Black Jack\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Snake.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GuessTheNumber.h">
@@ -36,6 +57,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="HangMan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BeerRun.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BlackJack.h">
+      <Filter>Black Jack\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Snake.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

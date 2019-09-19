@@ -3,12 +3,14 @@
 
 #include "GuessTheNumber.h"
 #include "HangMan.h"
+#include "BeerRun.h"
 
 using namespace std;
 
 vector<shared_ptr<GameBase>> GetGames();
 void PrintNames(vector<shared_ptr<GameBase>> games);
 shared_ptr<GameBase> GetGameToPlay();
+
 
 int main(int argc, char** argv)
 {
@@ -24,6 +26,11 @@ int main(int argc, char** argv)
 
 
 // FUNCTIONS
+
+/// <summary>
+/// Gets the games.
+/// </summary>
+/// <returns></returns>
 vector<shared_ptr<GameBase>> GetGames()
 {
 	vector<shared_ptr<GameBase>> games;
@@ -34,10 +41,17 @@ vector<shared_ptr<GameBase>> GetGames()
 	auto hangman = make_shared<HangMan>();
 	games.push_back(std::move(hangman));
 
+	auto beerrun = make_shared<BeerRun>();
+	games.push_back(std::move(beerrun));
+
 	return games;
 
 }
 
+/// <summary>
+/// Prints the names.
+/// </summary>
+/// <param name="games">The games.</param>
 void PrintNames(vector<shared_ptr<GameBase>> games)
 {
 	auto counter = 1;
@@ -51,6 +65,10 @@ void PrintNames(vector<shared_ptr<GameBase>> games)
 	}
 }
 
+/// <summary>
+/// Gets the game to play.
+/// </summary>
+/// <returns></returns>
 shared_ptr<GameBase> GetGameToPlay()
 {
 	auto games = GetGames();

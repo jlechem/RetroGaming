@@ -4,14 +4,23 @@
 
 using namespace std;
 
+/// <summary>
+/// Initializes a new instance of the <see cref="GuessTheNumber"/> class.
+/// </summary>
 GuessTheNumber::GuessTheNumber()
 {
 }
 
+/// <summary>
+/// Finalizes an instance of the <see cref="GuessTheNumber"/> class.
+/// </summary>
 GuessTheNumber::~GuessTheNumber()
 {
 }
 
+/// <summary>
+/// Plays this instance.
+/// </summary>
 void GuessTheNumber::Play()
 {
 	random_device randomDevice;
