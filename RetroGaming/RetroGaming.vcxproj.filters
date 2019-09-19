@@ -25,6 +25,30 @@
     <Filter Include="Snake">
       <UniqueIdentifier>{9815a2da-6b34-4e7f-b134-6df8bd557f7d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Snake\Header Files">
+      <UniqueIdentifier>{1a008fcf-4f4d-4859-a207-c5887ed4ec6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Snake\Source Files">
+      <UniqueIdentifier>{d7ed7ca6-c7fc-4b3a-96c6-ca261f1589ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Beer Run">
+      <UniqueIdentifier>{90bc54ab-ac5a-48ee-b075-4d61ad856320}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Beer Run\Header FIles">
+      <UniqueIdentifier>{71208b2b-3080-4d8c-b6c6-f7ee22e22307}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Beer Run\Source Files">
+      <UniqueIdentifier>{fddf8dd3-fd31-4d5e-bf0a-a97627850800}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HangMan">
+      <UniqueIdentifier>{fabaa921-5d97-4e1c-94f2-c9803bfbb5aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HangMan\Header Files">
+      <UniqueIdentifier>{d23b0598-efc5-4421-8807-1dc31c0b8911}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HangMan\Source Files">
+      <UniqueIdentifier>{88a9ea9d-4903-4be8-9700-9b532f33c81a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GuessTheNumber.cpp">
@@ -36,17 +60,29 @@
     <ClCompile Include="GameBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="HangMan.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BeerRun.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="BlackJack.cpp">
       <Filter>Black Jack\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Snake.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Snake\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BeerRun.cpp">
+      <Filter>Beer Run\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HangMan.cpp">
+      <Filter>HangMan\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Deck.cpp">
+      <Filter>Black Jack\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Card.cpp">
+      <Filter>Black Jack\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Dealer.cpp">
+      <Filter>Black Jack\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Black Jack\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -56,17 +92,32 @@
     <ClInclude Include="GameBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="HangMan.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BeerRun.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="BlackJack.h">
       <Filter>Black Jack\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Snake.h">
-      <Filter>Header Files</Filter>
+      <Filter>Snake\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BeerRun.h">
+      <Filter>Beer Run\Header FIles</Filter>
+    </ClInclude>
+    <ClInclude Include="HangMan.h">
+      <Filter>HangMan\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Deck.h">
+      <Filter>Black Jack\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Card.h">
+      <Filter>Black Jack\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Dealer.h">
+      <Filter>Black Jack\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Black Jack\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CardSuites.h">
+      <Filter>Black Jack\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -157,18 +157,27 @@
   <ItemGroup>
     <ClCompile Include="BeerRun.cpp" />
     <ClCompile Include="BlackJack.cpp" />
+    <ClCompile Include="Card.cpp" />
+    <ClCompile Include="Dealer.cpp" />
+    <ClCompile Include="Deck.cpp" />
     <ClCompile Include="GameBase.cpp" />
     <ClCompile Include="GuessTheNumber.cpp" />
     <ClCompile Include="HangMan.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="Snake.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BeerRun.h" />
     <ClInclude Include="BlackJack.h" />
+    <ClInclude Include="Card.h" />
+    <ClInclude Include="CardSuites.h" />
+    <ClInclude Include="Dealer.h" />
+    <ClInclude Include="Deck.h" />
     <ClInclude Include="GameBase.h" />
     <ClInclude Include="GuessTheNumber.h" />
     <ClInclude Include="HangMan.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="Snake.h" />
   </ItemGroup>
   <ItemGroup>
