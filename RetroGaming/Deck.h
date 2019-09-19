@@ -16,9 +16,11 @@ public:
 
 	void shuffle();
 
+	unique_ptr<Card> deal();
+
 private:
 	void loadCards();
 
-	unique_ptr<vector<unique_ptr<Card>>> p_Cards;
-	unique_ptr<vector<unique_ptr<Card>>> p_ShuffledCards;
+	vector<unique_ptr<Card>> _cards;
+	vector<unique_ptr<Card>> _shuffledCards;
 };

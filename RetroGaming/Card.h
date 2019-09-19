@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <clocale>
 
 #include "CardSuites.h"
 
@@ -14,6 +15,7 @@ public:
 	~Card();
 
 	void setSuite(CardSuites);
+	string getSuite();
 
 	int getValue();
 

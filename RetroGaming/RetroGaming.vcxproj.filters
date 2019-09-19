@@ -78,12 +78,6 @@
     <ClCompile Include="Card.cpp">
       <Filter>Black Jack\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Dealer.cpp">
-      <Filter>Black Jack\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Black Jack\Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GuessTheNumber.h">
@@ -108,12 +102,6 @@
       <Filter>Black Jack\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Card.h">
-      <Filter>Black Jack\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Dealer.h">
-      <Filter>Black Jack\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
       <Filter>Black Jack\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CardSuites.h">

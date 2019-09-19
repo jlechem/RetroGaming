@@ -36,6 +36,32 @@ void Card::setSuite(CardSuites suite)
 	_suite = suite;
 }
 
+string Card::getSuite()
+{
+	string suite = "";
+
+	switch (_suite)
+	{
+		case Spade:
+			suite = "\3";
+			break;
+	
+		case Diamond:
+			suite = "\0";
+			break;
+
+		case Heart:
+			suite = "\1";
+			break;
+	
+		case Club:
+			suite = "\2";
+			break;
+	}
+
+	return suite;
+}
+
 /// <summary>
 /// Gets the value.
 /// </summary>

@@ -1,9 +1,9 @@
 #pragma once
 
+#include <clocale>
+
 #include "GameBase.h"
 #include "Deck.h"
-#include "Player.h"
-#include "Dealer.h"
 
 using namespace std;
 
@@ -17,11 +17,11 @@ public:
 	void Play();
 
 private:
-	unique_ptr<Deck> p_Deck;
+	Deck _deck;
 
-	unique_ptr<Player> p_Player;
+	bool isGameOver(int);
 
-	unique_ptr<Dealer> p_Dealer;
+	vector<unique_ptr<Card>> _playerHand;
+	vector<unique_ptr<Card>> _dealerHand;
 
 };
-
