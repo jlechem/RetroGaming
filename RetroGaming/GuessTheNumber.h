@@ -2,7 +2,7 @@
 
 #include "GameBase.h"
 
-class GuessTheNumber: GameBase
+class GuessTheNumber: public GameBase
 {
 public:
 	GuessTheNumber();
