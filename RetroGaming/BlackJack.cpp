@@ -48,12 +48,7 @@ void BlackJack::Play()
 			_dealerHand.push_back(_deck.deal());
 			_playerHand.push_back(_deck.deal());
 
-			cout << endl << "Dealer Hand" << endl
-				<< _dealerHand[0]->getValue() << " " << _dealerHand[0]->getSuite() << " (" << _dealerHand[0]->getName() << ")" << endl
-				<< "XX" << endl << endl
-				<< "Player Hand" << endl
-				<< _playerHand[0]->getValue() << " " << _playerHand[0]->getSuite() << " (" << _playerHand[0]->getName() << ")" << endl
-				<< _playerHand[1]->getValue() << " " << _playerHand[1]->getSuite() << " (" << _playerHand[1]->getName() << ")" << endl << endl;
+			printHands();
 
 			auto choice = 1;
 
@@ -74,6 +69,9 @@ void BlackJack::Play()
 				}
 				else
 				{
+					_playerHand.push_back(_deck.deal());
+
+					printHands();
 
 				}
 			} while (choice != 2);	
@@ -103,4 +101,32 @@ bool BlackJack::isGameOver(int playerMoney)
 
 	return gameOver;
 
+}
+
+/// <summary>
+/// Determines whether the specified value is ace.
+/// </summary>
+/// <param name="value">The value.</param>
+/// <returns>
+///   <c>true</c> if the specified value is ace; otherwise, <c>false</c>.
+/// </returns>
+bool BlackJack::isAce(int value)
+{
+	return value == 1 || value == 11;
+}
+
+/// <summary>
+/// Prints the hands.
+/// </summary>
+void BlackJack::printHands()
+{
+	cout << endl << "Dealer Hand" << endl
+		<< _dealerHand[0]->getValue() << " " << _dealerHand[0]->getSuite() << " (" << _dealerHand[0]->getName() << ")" << endl
+		<< "XX" << endl << endl
+		<< "Player Hand" << endl;
+
+		for (const auto& card : _playerHand)
+		{
+			cout << card->getValue() << " " << card->getSuite() << " (" << card->getName() << ")" << endl;
+		}
 }

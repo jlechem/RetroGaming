@@ -19,9 +19,11 @@ public:
 private:
 	Deck _deck;
 
-	bool isGameOver(int);
-
 	vector<unique_ptr<Card>> _playerHand;
 	vector<unique_ptr<Card>> _dealerHand;
+
+	bool isGameOver(int);
+	bool isAce(int value);
+	void printHands();
 
 };
