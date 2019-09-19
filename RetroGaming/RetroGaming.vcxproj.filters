@@ -24,6 +24,9 @@
     <ClCompile Include="GameBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="HangMan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GuessTheNumber.h">
@@ -32,5 +35,11 @@
     <ClInclude Include="GameBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="HangMan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Words.txt" />
   </ItemGroup>
 </Project>

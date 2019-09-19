@@ -2,20 +2,21 @@
 #include <iostream>
 
 #include "GuessTheNumber.h"
+#include "HangMan.h"
 
 using namespace std;
 
-vector<GameBase*>* GetGames();
-void PrintNames(vector<GameBase*>* games);
+vector<shared_ptr<GameBase>> GetGames();
+void PrintNames(vector<shared_ptr<GameBase>> games);
+shared_ptr<GameBase> GetGameToPlay();
 
 int main(int argc, char** argv)
 {
-	auto games = GetGames();
-	PrintNames(games);
+	auto gameToPlay = GetGameToPlay();
+	
+	cout << endl << endl;
 
-	GuessTheNumber game;
-
-	game.Play();
+	gameToPlay->Play();
 
 	return 0;
 
@@ -23,22 +24,62 @@ int main(int argc, char** argv)
 
 
 // FUNCTIONS
-vector<GameBase*>* GetGames()
+vector<shared_ptr<GameBase>> GetGames()
 {
-	auto games = new vector<GameBase*>();
+	vector<shared_ptr<GameBase>> games;
 
-	games->push_back(new GuessTheNumber());
+	auto guessTheNumber = make_shared<GuessTheNumber>();
+	games.push_back(std::move(guessTheNumber));
+
+	auto hangman = make_shared<HangMan>();
+	games.push_back(std::move(hangman));
 
 	return games;
 
 }
 
-void PrintNames(vector<GameBase*>* games)
+void PrintNames(vector<shared_ptr<GameBase>> games)
 {
 	auto counter = 1;
 
-	for (vector<GameBase*>::iterator it = games->begin(); it != games->end(); ++it)
+	cout << "Select a game" << endl << endl;
+
+	for (const auto& game : games)
 	{
-		cout << "(" << counter << ") " << (*it)->getName() << endl;
+		cout << "(" << counter << ") " << game->getName() << endl;
+		counter++;
 	}
+}
+
+shared_ptr<GameBase> GetGameToPlay()
+{
+	auto games = GetGames();
+
+	auto maxIndex = games.size();
+	auto index = 0;
+	
+	auto validChoice = true;
+
+	do
+	{
+		PrintNames(games);
+
+		cout << endl << "Selection: ";
+		cin >> index;
+
+		if (cin.fail() || index <= 0 || index > maxIndex )
+		{
+			validChoice = false;
+			cin.clear();
+			cin.ignore();
+			cout << "Invalid Selection" << endl << endl;
+		}
+		else
+		{
+			validChoice = true;
+		}
+	} while (!validChoice);
+	
+	return games[index - 1];
+
 }
