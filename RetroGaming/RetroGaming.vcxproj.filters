@@ -78,6 +78,12 @@
     <ClCompile Include="Card.cpp">
       <Filter>Black Jack\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Psuedonym.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GuessTheNumber.h">
@@ -106,6 +112,12 @@
     </ClInclude>
     <ClInclude Include="CardSuites.h">
       <Filter>Black Jack\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Psuedonym.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

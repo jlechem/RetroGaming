@@ -1,10 +1,10 @@
 #pragma once
 
-#include "Card.h"
-
 #include <iostream>
 #include <vector>
-#include <random>
+
+#include "Card.h"
+#include "Utilities.h"
 
 using namespace std;
 

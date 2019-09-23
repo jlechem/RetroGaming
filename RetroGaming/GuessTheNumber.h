@@ -1,6 +1,7 @@
 #pragma once
 
 #include "GameBase.h"
+#include "Utilities.h"
 
 class GuessTheNumber: public GameBase
 {

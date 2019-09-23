@@ -19,9 +19,6 @@ Deck::~Deck()
 /// </summary>
 void Deck::shuffle()
 {
-	random_device randomDevice;
-	mt19937 mt(randomDevice());
-	
 	_cards.clear();
 	_shuffledCards.clear();
 
@@ -31,9 +28,7 @@ void Deck::shuffle()
 	// from the straight deck and add them to the shuffled deck
 	for (auto i = 51; i >= 0; i--)
 	{
-		uniform_real_distribution<double> dist(0.0, i);
-
-		int nextCardIndex = (int)dist(mt);
+		int nextCardIndex = getRandomIndex(i);
 
 		_shuffledCards.push_back(std::move(_cards[nextCardIndex]));
 		_cards.erase(_cards.begin() + nextCardIndex);

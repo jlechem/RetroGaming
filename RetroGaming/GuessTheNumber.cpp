@@ -1,5 +1,5 @@
 #include <iostream>
-#include <random>
+
 #include "GuessTheNumber.h"
 
 using namespace std;
@@ -23,15 +23,11 @@ GuessTheNumber::~GuessTheNumber()
 /// </summary>
 void GuessTheNumber::Play()
 {
-	random_device randomDevice;
-	mt19937 mt(randomDevice());
-	uniform_real_distribution<double> dist(1.0, 100.0);
-
 	cout << "Welcome to guess the number" << endl << endl
 		<< "Your goal is to guess the number between 1 and 100 in 10 tries or less" << endl << endl;
 
 	int numberOfTries = 0;
-	int numberToGuess = dist(mt);
+	int numberToGuess = getRandomIndex(100);
 	int maxNumberOfTries = 10;
 	int currentGuess = 0;
 
