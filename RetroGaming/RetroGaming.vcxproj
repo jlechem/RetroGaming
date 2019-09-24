@@ -163,6 +163,7 @@
     <ClCompile Include="GuessTheNumber.cpp" />
     <ClCompile Include="HangMan.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Palindromes.cpp" />
     <ClCompile Include="Psuedonym.cpp" />
     <ClCompile Include="Snake.cpp" />
     <ClCompile Include="Utilities.cpp" />
@@ -176,6 +177,7 @@
     <ClInclude Include="GameBase.h" />
     <ClInclude Include="GuessTheNumber.h" />
     <ClInclude Include="HangMan.h" />
+    <ClInclude Include="Palindromes.h" />
     <ClInclude Include="Psuedonym.h" />
     <ClInclude Include="Snake.h" />
     <ClInclude Include="Utilities.h" />

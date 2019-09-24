@@ -24,7 +24,7 @@ unique_ptr<vector<string>> loadWords(string fileName)
 
 	fstream file;
 
-	file.open(fileName, ios::out);
+	file.open(fileName, ios::in);
 
 	if (file.is_open())
 	{
