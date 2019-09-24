@@ -2,14 +2,11 @@
 
 #include "GameBase.h"
 
-class BeerRun :
+class Anagrams :
 	public GameBase
 {
 public:
-	BeerRun();
-	~BeerRun();
-
-	void Play();
-
+	Anagrams();
+	~Anagrams();
 };
 

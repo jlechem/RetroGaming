@@ -155,6 +155,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Anagrams.cpp" />
     <ClCompile Include="BeerRun.cpp" />
     <ClCompile Include="BlackJack.cpp" />
     <ClCompile Include="Card.cpp" />
@@ -169,6 +170,7 @@
     <ClCompile Include="Utilities.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Anagrams.h" />
     <ClInclude Include="BeerRun.h" />
     <ClInclude Include="BlackJack.h" />
     <ClInclude Include="Card.h" />

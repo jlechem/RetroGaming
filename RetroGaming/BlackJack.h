@@ -1,11 +1,7 @@
 #pragma once
 
-#include <clocale>
-
 #include "GameBase.h"
 #include "Deck.h"
-
-using namespace std;
 
 class BlackJack :
 	public GameBase

@@ -1,13 +1,6 @@
 #pragma once
 
-#include <iostream>
-#include <string>
-#include <vector>
-
 #include "GameBase.h"
-#include "Utilities.h"
-
-using namespace std;
 
 class Psuedonym :
 	public GameBase

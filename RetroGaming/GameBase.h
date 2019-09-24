@@ -1,6 +1,13 @@
 #pragma once
 
+#include <iostream>
 #include <string>
+#include <clocale>
+#include <vector>
+
+#include "Utilities.h"
+
+using namespace std;
 
 class GameBase
 {
