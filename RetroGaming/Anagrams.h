@@ -8,5 +8,8 @@ class Anagrams :
 public:
 	Anagrams();
 	~Anagrams();
+
+	void Play();
+
 };
 

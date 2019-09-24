@@ -7,6 +7,7 @@
 #include "BlackJack.h"
 #include "Psuedonym.h"
 #include "Palindromes.h"
+#include "Anagrams.h"
 
 using namespace std;
 
@@ -55,6 +56,9 @@ vector<shared_ptr<GameBase>> GetGames()
 
 	auto palindromes = make_shared<Palindromes>();
 	games.push_back(std::move(palindromes));
+
+	auto anagrams = make_shared<Anagrams>();
+	games.push_back(std::move(anagrams));
 
 	return games;
 

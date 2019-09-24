@@ -32,11 +32,43 @@ unique_ptr<vector<string>> loadWords(string fileName)
 
 		while (getline(file, line))
 		{
-			words.push_back(line);
+			trim(line);
+
+			if (line.size() > 0)
+			{
+				words.push_back(line);
+			}
 		}
 	}
 
 	file.close();
 
 	return make_unique<vector<string>>(words);
+}
+
+/// <summary>
+/// Trims the specified value.
+/// </summary>
+/// <param name="value">The value.</param>
+void trim(string value)
+{
+	value.erase(value.find_last_not_of(" \n\r\t") + 1);
+}
+
+string reverseString(string word)
+{
+	auto reversedWord = string(word);
+	reverse(reversedWord.begin(), reversedWord.end());
+	return reversedWord;
+}
+
+void printVectorOfString(const vector<string> &items)
+{
+	for (const auto& item : items)
+	{
+		cout << item << endl;
+	}
+
+	cout << endl << endl;
+
 }

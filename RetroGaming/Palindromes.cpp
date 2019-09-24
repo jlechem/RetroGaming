@@ -32,11 +32,6 @@ void Palindromes::Play()
 
 	cout << endl << "Number of palindromes found: " << palindromes.size() << endl;
 
- 	for (const auto& word : palindromes)
-	{
-		cout << word << endl;
-	}
-
-	cout << endl << endl;
+	printVectorOfString(palindromes);
 
 }
