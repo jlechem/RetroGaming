@@ -15,4 +15,6 @@ void trim(string value);
 
 string reverseString(string word);
 
+string loadFileIntoString(string fileName);
+
 void printVectorOfString(const vector<string> &items);

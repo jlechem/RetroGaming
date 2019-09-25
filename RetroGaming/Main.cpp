@@ -8,6 +8,7 @@
 #include "Psuedonym.h"
 #include "Palindromes.h"
 #include "Anagrams.h"
+#include "NullCipher.h"
 
 using namespace std;
 
@@ -59,6 +60,9 @@ vector<shared_ptr<GameBase>> GetGames()
 
 	auto anagrams = make_shared<Anagrams>();
 	games.push_back(std::move(anagrams));
+
+	auto null_cipher = make_shared<NullCipher>();
+	games.push_back(std::move(null_cipher));
 
 	return games;
 
