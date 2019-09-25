@@ -1,10 +1,24 @@
+/*
+	This file is part of {{ RetroGaming }}.
+
+	Copyright [2019] [Justin LeCheminant]
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+	http://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+ */
+
 #include "Utilities.h"
 
-/// <summary>
-/// Gets the random index.
-/// </summary>
-/// <param name="max">The maximum.</param>
-/// <returns></returns>
 int getRandomIndex(long max)
 {
 	random_device random_device;
@@ -13,11 +27,6 @@ int getRandomIndex(long max)
 	return dist(engine);
 }
 
-/// <summary>
-/// Loads the words.
-/// </summary>
-/// <param name="fileName">Name of the file.</param>
-/// <returns></returns>
 unique_ptr<vector<string>> loadWords(string fileName)
 {
 	vector<string> words;
@@ -46,10 +55,6 @@ unique_ptr<vector<string>> loadWords(string fileName)
 	return make_unique<vector<string>>(words);
 }
 
-/// <summary>
-/// Trims the specified value.
-/// </summary>
-/// <param name="value">The value.</param>
 void trim(string value)
 {
 	value.erase(value.find_last_not_of(" \n\r\t") + 1);

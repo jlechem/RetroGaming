@@ -1,18 +1,28 @@
+/*
+	This file is part of {{ RetroGaming }}.
+
+	Copyright [2019] [Justin LeCheminant]
+
+	Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+	http://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+ */
+
 #include "Card.h"
 
-/// <summary>
-/// Initializes a new instance of the <see cref="Card"/> class.
-/// </summary>
 Card::Card()
 {
 }
 
-/// <summary>
-/// Initializes a new instance of the <see cref="Card"/> class.
-/// </summary>
-/// <param name="">The .</param>
-/// <param name="">The .</param>
-/// <param name="">The .</param>
 Card::Card(CardSuites suite, int value, string name)
 {
 	_suite = suite;
@@ -20,17 +30,10 @@ Card::Card(CardSuites suite, int value, string name)
 	_name = name;
 }
 
-/// <summary>
-/// Finalizes an instance of the <see cref="Card"/> class.
-/// </summary>
 Card::~Card()
 {
 }
 
-/// <summary>
-/// Sets the suite.
-/// </summary>
-/// <param name="suite">The suite.</param>
 void Card::setSuite(CardSuites suite)
 {
 	_suite = suite;
@@ -62,39 +65,21 @@ string Card::getSuite()
 	return suite;
 }
 
-/// <summary>
-/// Gets the value.
-/// </summary>
-/// <returns></returns>
 int Card::getValue()
 {
 	return _value;
 }
 
-/// <summary>
-/// Gets the name.
-/// </summary>
-/// <returns></returns>
 string Card::getName()
 {
 	return _name;
 }
 
-/// <summary>
-/// Prints this instance.
-/// </summary>
-/// <returns></returns>
 string Card::print()
 {
 	return string();
 }
 
-/// <summary>
-/// Determines whether this instance is an ace card.
-/// </summary>
-/// <returns>
-///   <c>true</c> if this instance is an ace card; otherwise, <c>false</c>.
-/// </returns>
 bool Card::isAce()
 {
 	return _value == 1 || _value == 11;
