@@ -49,6 +49,15 @@
     <Filter Include="HangMan\Source Files">
       <UniqueIdentifier>{88a9ea9d-4903-4be8-9700-9b532f33c81a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Genetic Rats">
+      <UniqueIdentifier>{6945a7e6-f039-4426-a820-1b74cf7ee1f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Genetic Rats\Header Files">
+      <UniqueIdentifier>{3bb6fc62-cd7f-4527-a137-ccd2a4ab4b4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Genetic Rats\Source Files">
+      <UniqueIdentifier>{6db3fc98-f264-4990-b30f-f1f14cc557e4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GuessTheNumber.cpp">
@@ -93,6 +102,12 @@
     <ClCompile Include="NullCipher.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MonsterRats.cpp">
+      <Filter>Genetic Rats\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Rat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GuessTheNumber.h">
@@ -135,6 +150,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="NullCipher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterRats.h">
+      <Filter>Genetic Rats\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rat.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -28,6 +28,7 @@ limitations under the License.
 #include "Palindromes.h"
 #include "Anagrams.h"
 #include "NullCipher.h"
+#include "MonsterRats.h"
 
 using namespace std;
 
@@ -50,11 +51,6 @@ int main(int argc, char** argv)
 
 
 // FUNCTIONS
-
-/// <summary>
-/// Gets the games.
-/// </summary>
-/// <returns></returns>
 vector<shared_ptr<GameBase>> GetGames()
 {
 	vector<shared_ptr<GameBase>> games;
@@ -83,14 +79,13 @@ vector<shared_ptr<GameBase>> GetGames()
 	auto null_cipher = make_shared<NullCipher>();
 	games.push_back(std::move(null_cipher));
 
+	auto rats = make_shared<MonsterRats>();
+	games.push_back(std::move(rats));
+
 	return games;
 
 }
 
-/// <summary>
-/// Prints the names.
-/// </summary>
-/// <param name="games">The games.</param>
 void PrintNames(vector<shared_ptr<GameBase>> games)
 {
 	auto counter = 1;
@@ -104,10 +99,6 @@ void PrintNames(vector<shared_ptr<GameBase>> games)
 	}
 }
 
-/// <summary>
-/// Gets the game to play.
-/// </summary>
-/// <returns></returns>
 shared_ptr<GameBase> GetGameToPlay()
 {
 	auto games = GetGames();
