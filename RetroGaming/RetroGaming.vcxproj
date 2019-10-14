@@ -165,6 +165,7 @@
     <ClCompile Include="HangMan.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MonsterRats.cpp" />
+    <ClCompile Include="MontyHall.cpp" />
     <ClCompile Include="NullCipher.cpp" />
     <ClCompile Include="Palindromes.cpp" />
     <ClCompile Include="Psuedonym.cpp" />
@@ -183,10 +184,12 @@
     <ClInclude Include="GuessTheNumber.h" />
     <ClInclude Include="HangMan.h" />
     <ClInclude Include="MonsterRats.h" />
+    <ClInclude Include="MontyHall.h" />
     <ClInclude Include="NullCipher.h" />
     <ClInclude Include="Palindromes.h" />
     <ClInclude Include="Psuedonym.h" />
     <ClInclude Include="Rat.h" />
+    <ClInclude Include="RatGenders.h" />
     <ClInclude Include="Snake.h" />
     <ClInclude Include="Utilities.h" />
   </ItemGroup>

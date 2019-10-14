@@ -58,6 +58,15 @@
     <Filter Include="Genetic Rats\Source Files">
       <UniqueIdentifier>{6db3fc98-f264-4990-b30f-f1f14cc557e4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Monty Hall">
+      <UniqueIdentifier>{fdec96ae-63f9-4477-9d24-2f85e0dcf5c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Monty Hall\Header Files">
+      <UniqueIdentifier>{6a435c97-b67a-401b-8f45-631a47435bdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Monty Hall\Source Files">
+      <UniqueIdentifier>{d3c7a20c-3691-4f64-8bb5-ef7f990af5e8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GuessTheNumber.cpp">
@@ -108,6 +117,9 @@
     <ClCompile Include="Rat.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MontyHall.cpp">
+      <Filter>Monty Hall\Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GuessTheNumber.h">
@@ -157,6 +169,12 @@
     </ClInclude>
     <ClInclude Include="Rat.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RatGenders.h">
+      <Filter>Genetic Rats\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MontyHall.h">
+      <Filter>Monty Hall\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

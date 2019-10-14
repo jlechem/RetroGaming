@@ -28,6 +28,10 @@ using namespace std;
 
 int getRandomIndex(long max);
 
+int getRandomNumber(long max);
+
+int getRandomNumber(long min, long max);
+
 unique_ptr<vector<string>> loadWords(string fileName);
 
 void trim(string value);

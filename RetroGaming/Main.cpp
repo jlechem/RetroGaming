@@ -29,6 +29,7 @@ limitations under the License.
 #include "Anagrams.h"
 #include "NullCipher.h"
 #include "MonsterRats.h"
+#include "MontyHall.h"
 
 using namespace std;
 
@@ -81,6 +82,9 @@ vector<shared_ptr<GameBase>> GetGames()
 
 	auto rats = make_shared<MonsterRats>();
 	games.push_back(std::move(rats));
+
+	auto montyHall = make_shared<MontyHall>();
+	games.push_back(std::move(montyHall));
 
 	return games;
 

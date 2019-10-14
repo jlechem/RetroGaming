@@ -27,6 +27,22 @@ int getRandomIndex(long max)
 	return dist(engine);
 }
 
+int getRandomNumber(long max)
+{
+	random_device random_device;
+	mt19937 engine{ random_device() };
+	uniform_int_distribution<int> dist(0, max);
+	return dist(engine);
+}
+
+int getRandomNumber(long min, long max)
+{
+	random_device random_device;
+	mt19937 engine{ random_device() };
+	uniform_int_distribution<int> dist(min, max);
+	return dist(engine);
+}
+
 unique_ptr<vector<string>> loadWords(string fileName)
 {
 	vector<string> words;
