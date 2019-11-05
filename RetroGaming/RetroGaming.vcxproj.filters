@@ -67,6 +67,27 @@
     <Filter Include="Monty Hall\Source Files">
       <UniqueIdentifier>{d3c7a20c-3691-4f64-8bb5-ef7f990af5e8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Crypto">
+      <UniqueIdentifier>{584d3085-d58c-4ffe-8c8b-a56aa03bc187}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crypto\Transposition">
+      <UniqueIdentifier>{971ebb3a-f337-425c-8697-5648a17d2f26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crypto\Transposition\Header Files">
+      <UniqueIdentifier>{6aca9bcb-78cb-4331-85f4-0dc5e0618cd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crypto\Transposition\Source Files">
+      <UniqueIdentifier>{8d88ce68-71eb-480d-9f9d-73ca1c5175ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crypto\Null Cipher">
+      <UniqueIdentifier>{3a7de55a-bd41-4dd9-a1d0-380a9522feba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crypto\Null Cipher\Header Files">
+      <UniqueIdentifier>{bf8cfbd0-f0ac-401e-b6f3-8a6605007756}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crypto\Null Cipher\Source Files">
+      <UniqueIdentifier>{90053d80-9fba-48af-96ff-57ee5cd92371}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GuessTheNumber.cpp">
@@ -108,17 +129,20 @@
     <ClCompile Include="Anagrams.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="NullCipher.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="MonsterRats.cpp">
       <Filter>Genetic Rats\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Rat.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="MontyHall.cpp">
       <Filter>Monty Hall\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Transposition.cpp">
+      <Filter>Crypto\Transposition\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Rat.cpp">
+      <Filter>Genetic Rats\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NullCipher.cpp">
+      <Filter>Crypto\Null Cipher\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -161,20 +185,23 @@
     <ClInclude Include="Anagrams.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NullCipher.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="MonsterRats.h">
       <Filter>Genetic Rats\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Rat.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="RatGenders.h">
       <Filter>Genetic Rats\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MontyHall.h">
       <Filter>Monty Hall\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Transposition.h">
+      <Filter>Crypto\Transposition\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rat.h">
+      <Filter>Genetic Rats\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NullCipher.h">
+      <Filter>Crypto\Null Cipher\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

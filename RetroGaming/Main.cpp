@@ -30,6 +30,7 @@ limitations under the License.
 #include "NullCipher.h"
 #include "MonsterRats.h"
 #include "MontyHall.h"
+#include "Transposition.h"
 
 using namespace std;
 
@@ -55,6 +56,8 @@ int main(int argc, char** argv)
 vector<shared_ptr<GameBase>> GetGames()
 {
 	vector<shared_ptr<GameBase>> games;
+
+	// TODO: Find a way to load these in a DI like manner
 
 	auto guessTheNumber = make_shared<GuessTheNumber>();
 	games.push_back(std::move(guessTheNumber));
@@ -85,6 +88,9 @@ vector<shared_ptr<GameBase>> GetGames()
 
 	auto montyHall = make_shared<MontyHall>();
 	games.push_back(std::move(montyHall));
+
+	auto transposition = make_shared<Transposition>();
+	games.push_back(std::move(transposition));
 
 	return games;
 

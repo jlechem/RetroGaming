@@ -171,6 +171,7 @@
     <ClCompile Include="Psuedonym.cpp" />
     <ClCompile Include="Rat.cpp" />
     <ClCompile Include="Snake.cpp" />
+    <ClCompile Include="Transposition.cpp" />
     <ClCompile Include="Utilities.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -191,6 +192,7 @@
     <ClInclude Include="Rat.h" />
     <ClInclude Include="RatGenders.h" />
     <ClInclude Include="Snake.h" />
+    <ClInclude Include="Transposition.h" />
     <ClInclude Include="Utilities.h" />
   </ItemGroup>
   <ItemGroup>
