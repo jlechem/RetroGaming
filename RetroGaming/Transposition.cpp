@@ -23,6 +23,33 @@ Transposition::Transposition()
 {
 	_name = "Transposition cipher";
 	_description = "Create a basic transposition cipher";
+
+	_letters[0] = 'A';
+	_letters[1] = 'B';
+	_letters[2] = 'C';
+	_letters[3] = 'D';
+	_letters[4] = 'E';
+	_letters[5] = 'F';
+	_letters[6] = 'G';
+	_letters[7] = 'H';
+	_letters[8] = 'I';
+	_letters[9] = 'J';
+	_letters[10] = 'K';
+	_letters[11] = 'L';
+	_letters[12] = 'M';
+	_letters[13] = 'N';
+	_letters[14] = 'O';
+	_letters[15] = 'P';
+	_letters[16] = 'Q';
+	_letters[17] = 'R';
+	_letters[18] = 'S';
+	_letters[19] = 'T';
+	_letters[20] = 'U';
+	_letters[21] = 'V';
+	_letters[22] = 'W';
+	_letters[23] = 'X';
+	_letters[24] = 'Y';
+	_letters[25] = 'Z';
 }
 
 Transposition::~Transposition()
@@ -31,23 +58,93 @@ Transposition::~Transposition()
 
 void Transposition::Play()
 {
-	// TODO: Implememnt the transposition cipher, we should allow for encryption/decryption
+	string text;
+
+	cout << "Welcome to Transposition cipher" << endl
+		<< "This will take some text and randomly transpose the letters for you!" << endl << endl
+		<< "Enter text to transpose (alpha characters only [A-Z] will be transposed): " << flush;
+
+	cin.ignore();
+
+	getline(cin, text);
+
+	auto transposedText = EncryptString(text);
+
+	cout << endl << "The transposed(encrypted) text is: " << transposedText << endl;
+
 }
 
-string Transposition::EncryptString(string original)
+string Transposition::EncryptString(string original, int offset)
 {
+	string result;
+
+	if (offset == 0)
+	{
+		offset = getRandomNumber(0, 25);
+	}
+
+	for (const auto& letter : original)
+	{
+		// get the index of the current letter
+		auto currentLetterIndex = GetLetterIndex(letter);
+
+		if (currentLetterIndex >= 0)
+		{
+			auto newLetterIndex = currentLetterIndex + offset > 25 ?
+				offset - (25 - currentLetterIndex) :
+				currentLetterIndex + offset;
+
+			result += _letters[newLetterIndex];
+
+		}
+		else
+		{
+			result += letter;
+		}
+	}
+
+	return result;
+}
+
+string Transposition::DecryptString(string original, int offset)
+{
+	if (offset == 0)
+	{
+		offset = getRandomNumber(1, 26);
+	}
+
 	return string();
 }
 
-string Transposition::DecryptString(string original)
+void Transposition::EncryptFile(string file, int offset)
 {
-	return string();
+	if (offset == 0)
+	{
+		offset = getRandomNumber(1, 26);
+	}
 }
 
-void Transposition::EncryptFile(string file)
+void Transposition::DecryptFile(string file, int offset)
 {
+	if (offset == 0)
+	{
+		offset = getRandomNumber(1, 26);
+	}
 }
 
-void Transposition::DecryptFile(string file)
+int Transposition::GetLetterIndex(char letter)
 {
+	auto index = -1;
+
+	for (auto i = 0; i < 26; i++)
+	{
+		if (toupper(letter) == _letters[i])
+		{
+			index = i;
+			break;
+		}
+	}
+
+	return index;
+	
 }

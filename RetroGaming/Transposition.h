@@ -31,15 +31,14 @@ public:
 	void Play();
 
 private:
-	string EncryptString(string original);
-	string DecryptString(string original);
+	string EncryptString(string original, int offset = 0);
+	string DecryptString(string original, int offset = 0);
 
-	void EncryptFile(string file);
-	void DecryptFile(string file);
+	void EncryptFile(string file, int offset = 0);
+	void DecryptFile(string file, int offset = 0);
 
-	int _offset;
+	int GetLetterIndex(char letter);
 
-	
+	char _letters[26];
 
 };
-
