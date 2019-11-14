@@ -41,3 +41,7 @@ string reverseString(string word);
 string loadFileIntoString(string fileName);
 
 void printVectorOfString(const vector<string> &items);
+
+string createGUID();
+
+string createUniqueFilename(string extension = nullptr);

@@ -117,3 +117,25 @@ void printVectorOfString(const vector<string> &items)
 	cout << endl << endl;
 
 }
+
+string createGUID()
+{
+	return string();
+}
+
+string createUniqueFilename(string extension)
+{
+	auto filename = createGUID();
+
+	if (extension.length() > 0)
+	{
+		filename += "." + extension;
+	}
+	else
+	{
+		filename += ".txt";
+	}
+
+	return filename;
+
+}

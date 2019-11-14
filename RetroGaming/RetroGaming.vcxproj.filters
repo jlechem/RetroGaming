@@ -203,6 +203,9 @@
     <ClInclude Include="NullCipher.h">
       <Filter>Crypto\Null Cipher\Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="uuid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Words.txt" />

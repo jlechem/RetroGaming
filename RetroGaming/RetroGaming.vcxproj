@@ -92,6 +92,8 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\Users\ENSN\Documents\Visual Studio 2017\Projects\RetroGaming\RetroGaming\gsl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -108,6 +110,8 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\Users\ENSN\Documents\Visual Studio 2017\Projects\RetroGaming\RetroGaming\gsl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -126,6 +130,8 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\Users\ENSN\Documents\Visual Studio 2017\Projects\RetroGaming\RetroGaming\gsl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -146,6 +152,8 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>
       </PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\Users\ENSN\Documents\Visual Studio 2017\Projects\RetroGaming\RetroGaming\gsl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -194,6 +202,7 @@
     <ClInclude Include="Snake.h" />
     <ClInclude Include="Transposition.h" />
     <ClInclude Include="Utilities.h" />
+    <ClInclude Include="uuid.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Words.txt" />
