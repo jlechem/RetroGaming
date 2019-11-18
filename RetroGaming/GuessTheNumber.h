@@ -27,7 +27,7 @@ public:
 	GuessTheNumber();
 	~GuessTheNumber();
 
-	void Play();
+	void Play() override;
 
 };
 

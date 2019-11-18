@@ -41,7 +41,7 @@ public:
 	MonsterRats();
 	~MonsterRats();
 
-	void Play();
+	void Play() override;
 
 private:
 	vector<Rat> _rats;

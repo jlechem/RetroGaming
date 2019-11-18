@@ -28,7 +28,7 @@ public:
 	Snake();
 	~Snake();
 
-	void Play();
+	void Play() override;
 
 };
 

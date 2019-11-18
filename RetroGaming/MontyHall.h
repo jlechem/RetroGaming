@@ -28,7 +28,7 @@ public:
 	MontyHall();
 	~MontyHall();
 
-	void Play();
+	void Play() override;
 
 };
 

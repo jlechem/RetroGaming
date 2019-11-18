@@ -21,9 +21,9 @@ limitations under the License.
 #include "GameBase.h"
 
 GameBase::GameBase()
+ : _description { "A game where you guess a random number from 1 to 100 in 10 tries or less" },
+   _name{ "Guess The Number" } 
 {
-	_name = "Guess The Number";
-	_description = "A game where you guess a random number from 1 to 100 in 10 tries or less";
 }
 
 GameBase::~GameBase()

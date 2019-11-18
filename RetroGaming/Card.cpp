@@ -23,11 +23,11 @@ Card::Card()
 {
 }
 
-Card::Card(CardSuites suite, int value, string name)
+Card::Card(CardSuites suite, int value, const string& name)
+	: _suite{ suite },
+	  _value{ value },
+	  _name{ name }
 {
-	_suite = suite;
-	_value = value;
-	_name = name;
 }
 
 Card::~Card()

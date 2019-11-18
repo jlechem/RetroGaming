@@ -25,7 +25,7 @@ class Rat
 {
 public:
 	Rat();
-	Rat(double weight);
+    explicit Rat(double weight);
 	Rat(double weight, Gender gender);
 
 	~Rat();

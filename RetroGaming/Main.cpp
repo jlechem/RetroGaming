@@ -39,7 +39,7 @@ void PrintNames(vector<shared_ptr<GameBase>> games);
 shared_ptr<GameBase> GetGameToPlay();
 
 
-int main(int argc, char** argv)
+int main()
 {
 	auto gameToPlay = GetGameToPlay();
 	
@@ -114,7 +114,7 @@ shared_ptr<GameBase> GetGameToPlay()
 	auto games = GetGames();
 
 	auto maxIndex = games.size();
-	auto index = 0;
+	auto index = decltype(maxIndex){};
 	
 	auto validChoice = true;
 

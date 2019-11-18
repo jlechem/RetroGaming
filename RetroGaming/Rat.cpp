@@ -24,8 +24,9 @@ Rat::Rat()
 }
 
 Rat::Rat(double weight)
+	:_weight{ weight },
+     _gender{ Gender::Female }
 {
-	_weight = weight;
 }
 
 Rat::Rat(double weight, Gender gender) : Rat(weight)

@@ -18,6 +18,7 @@ limitations under the License.
  */
 
 #include "Utilities.h"
+#include "uuid.h"
 
 int getRandomIndex(long max)
 {
@@ -138,4 +139,8 @@ string createUniqueFilename(string extension)
 
 	return filename;
 
+}
+
+string GenerateRandomFileName(){
+    return uuids::to_string(uuids::uuid_system_generator{}()) + ".txt";
 }

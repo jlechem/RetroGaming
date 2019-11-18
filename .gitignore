@@ -64,3 +64,5 @@ RetroGaming/x64/Debug/HangMan.obj
 *.ipch
 *.obj
 *.enc
+build
+RetroGamingApp

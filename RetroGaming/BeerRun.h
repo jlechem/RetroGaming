@@ -28,7 +28,7 @@ public:
 	BeerRun();
 	~BeerRun();
 
-	void Play();
+	void Play() override;
 
 };
 

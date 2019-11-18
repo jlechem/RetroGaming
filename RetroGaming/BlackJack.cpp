@@ -34,8 +34,6 @@ void BlackJack::Play()
 	auto bet = 0;
 	auto maxBet = 25;
 	auto playerMoney = 500;
-	auto playerTotal = 0;
-	auto dealerTotal = 0;
 
 	cout << endl << "Welcome to Black Jack!!" << endl 
 		 << "Max Bet is $" << maxBet << endl;
@@ -49,8 +47,6 @@ void BlackJack::Play()
 
 		if (!cin.fail() && bet > 0 && bet < playerMoney)
 		{
-			int dealerTotal = 0;
-			int playerTotal = 0;
 
 			// deal original cards to dealer and player
 			_dealerHand.push_back(_deck.deal());
@@ -105,11 +101,6 @@ bool BlackJack::isGameOver(int playerMoney)
 
 	return gameOver;
 
-}
-
-bool BlackJack::isAce(int value)
-{
-	return value == 1 || value == 11;
 }
 
 void BlackJack::printHands()
