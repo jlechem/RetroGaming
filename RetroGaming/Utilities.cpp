@@ -22,41 +22,41 @@ limitations under the License.
 
 int getRandomIndex(long max)
 {
-	random_device random_device;
-	mt19937 engine{ random_device() };
-	uniform_int_distribution<int> dist(0, max);
+	std::random_device random_device;
+	std::mt19937 engine{ random_device() };
+	std::uniform_int_distribution<int> dist(0, max);
 	return dist(engine);
 }
 
 int getRandomNumber(long max)
 {
-	random_device random_device;
-	mt19937 engine{ random_device() };
-	uniform_int_distribution<int> dist(0, max);
+	std::random_device random_device;
+	std::mt19937 engine{ random_device() };
+	std::uniform_int_distribution<int> dist(0, max);
 	return dist(engine);
 }
 
 int getRandomNumber(long min, long max)
 {
-	random_device random_device;
-	mt19937 engine{ random_device() };
-	uniform_int_distribution<int> dist(min, max);
+	std::random_device random_device;
+	std::mt19937 engine{ random_device() };
+	std::uniform_int_distribution<int> dist(min, max);
 	return dist(engine);
 }
 
-unique_ptr<vector<string>> loadWords(string fileName)
+std::unique_ptr<std::vector<std::string>> loadWords(std::string fileName)
 {
-	vector<string> words;
+	std::vector<std::string> words;
 
-	fstream file;
+	std::fstream file;
 
-	file.open(fileName, ios::in);
+	file.open(fileName, std::ios::in);
 
 	if (file.is_open())
 	{
-		string line = "";
+		std::string line = "";
 
-		while (getline(file, line))
+		while (std::getline(file, line))
 		{
 			trim(line);
 
@@ -69,34 +69,34 @@ unique_ptr<vector<string>> loadWords(string fileName)
 
 	file.close();
 
-	return make_unique<vector<string>>(words);
+	return std::make_unique<std::vector<std::string>>(words);
 }
 
-void trim(string value)
+void trim(std::string value)
 {
 	value.erase(value.find_last_not_of(" \n\r\t") + 1);
 }
 
-string reverseString(string word)
+std::string reverseString(std::string word)
 {
-	auto reversedWord = string(word);
-	reverse(reversedWord.begin(), reversedWord.end());
+	auto reversedWord = std::string(word);
+	std::reverse(reversedWord.begin(), reversedWord.end());
 	return reversedWord;
 }
 
-string loadFileIntoString(string fileName)
+std::string loadFileIntoString(std::string fileName)
 {
-	string text;
+	std::string text;
 
-	fstream file;
+	std::fstream file;
 
-	file.open(fileName, ios::in);
+	file.open(fileName, std::ios::in);
 
 	if (file.is_open())
 	{
-		string line = "";
+		std::string line = "";
 
-		while (getline(file, line))
+		while (std::getline(file, line))
 		{
 			trim(line);
 			text.append(line);
@@ -108,39 +108,17 @@ string loadFileIntoString(string fileName)
 	return text;
 }
 
-void printVectorOfString(const vector<string> &items)
+void printVectorOfString(const std::vector<std::string> &items)
 {
 	for (const auto& item : items)
 	{
-		cout << item << endl;
+		std::cout << item << std::endl;
 	}
 
-	cout << endl << endl;
+	std::cout << std::endl << std::endl;
 
 }
 
-string createGUID()
-{
-	return string();
-}
-
-string createUniqueFilename(string extension)
-{
-	auto filename = createGUID();
-
-	if (extension.length() > 0)
-	{
-		filename += "." + extension;
-	}
-	else
-	{
-		filename += ".txt";
-	}
-
-	return filename;
-
-}
-
-string GenerateRandomFileName(){
+std::string GenerateRandomFileName(){
     return uuids::to_string(uuids::uuid_system_generator{}()) + ".txt";
 }

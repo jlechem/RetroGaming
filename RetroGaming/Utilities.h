@@ -24,26 +24,20 @@ limitations under the License.
 #include <fstream>
 #include <iostream>
 
-using namespace std;
-
 int getRandomIndex(long max);
 
 int getRandomNumber(long max);
 
 int getRandomNumber(long min, long max);
 
-unique_ptr<vector<string>> loadWords(string fileName);
+std::unique_ptr<std::vector<std::string>> loadWords(std::string fileName);
 
-void trim(string value);
+void trim(std::string value);
 
-string reverseString(string word);
+std::string reverseString(std::string word);
 
-string loadFileIntoString(string fileName);
+std::string loadFileIntoString(std::string fileName);
 
-void printVectorOfString(const vector<string> &items);
+void printVectorOfString(const std::vector<std::string> &items);
 
-string createGUID();
-
-string createUniqueFilename(string extension = nullptr);
-
-string GenerateRandomFileName();
+std::string GenerateRandomFileName();
