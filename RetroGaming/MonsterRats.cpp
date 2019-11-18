@@ -33,6 +33,3 @@ void MonsterRats::Play()
 {
 }
 
-void MonsterRats::populate(long minimumWeight, long maximumWeight, long modeWeight)
-{
-}

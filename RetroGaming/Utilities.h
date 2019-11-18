@@ -45,3 +45,5 @@ void printVectorOfString(const vector<string> &items);
 string createGUID();
 
 string createUniqueFilename(string extension = nullptr);
+
+string GenerateRandomFileName();

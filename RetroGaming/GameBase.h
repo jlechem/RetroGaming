@@ -33,7 +33,7 @@ class GameBase
 {
 public:
 	GameBase();
-	~GameBase();
+	virtual ~GameBase();
 
 	virtual void Play();
 

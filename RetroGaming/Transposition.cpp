@@ -106,7 +106,7 @@ string Transposition::EncryptString(string original, int offset)
 	return result;
 }
 
-string Transposition::DecryptString(string original, int offset)
+string Transposition::DecryptString(string/*original*/, int offset)
 {
 	if (offset == 0)
 	{
@@ -116,7 +116,7 @@ string Transposition::DecryptString(string original, int offset)
 	return string();
 }
 
-void Transposition::EncryptFile(string file, int offset)
+void Transposition::EncryptFile(string /*file*/, int offset)
 {
 	if (offset == 0)
 	{
@@ -124,7 +124,7 @@ void Transposition::EncryptFile(string file, int offset)
 	}
 }
 
-void Transposition::DecryptFile(string file, int offset)
+void Transposition::DecryptFile(string /*file*/, int offset)
 {
 	if (offset == 0)
 	{
