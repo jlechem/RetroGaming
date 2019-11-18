@@ -30,7 +30,7 @@ class Card
 {
 public:
 	Card();
-	Card(CardSuites, int, string);
+	Card(const CardSuites, int, const string&);
 	~Card();
 
 	void setSuite(CardSuites);

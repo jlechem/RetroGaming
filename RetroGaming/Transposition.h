@@ -28,7 +28,7 @@ public:
 	Transposition();
 	~Transposition();
 
-	void Play();
+	void Play() override;
 
 private:
 	string EncryptString(string original, int offset = 0);

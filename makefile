@@ -43,4 +43,4 @@ lint:
 	#clang-format ${SOURCE_FILES}
 
 analyse:
-	cppcheck --std=c++17 --inline-suppr --enable=all ${SOURCE_FILES}
+	cppcheck --std=c++17 --inline-suppr --enable=all --suppress=unusedFunction ${SOURCE_FILES}

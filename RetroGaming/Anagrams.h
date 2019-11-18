@@ -28,7 +28,7 @@ public:
 	Anagrams();
 	~Anagrams();
 
-	void Play();
+	void Play() override;
 
 };
 

@@ -29,7 +29,7 @@ public:
 	BlackJack();
 	~BlackJack();
 
-	void Play();
+	void Play() override;
 
 private:
 	Deck _deck;

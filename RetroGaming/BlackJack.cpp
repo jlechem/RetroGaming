@@ -103,11 +103,6 @@ bool BlackJack::isGameOver(int playerMoney)
 
 }
 
-bool BlackJack::isAce(int value)
-{
-	return value == 1 || value == 11;
-}
-
 void BlackJack::printHands()
 {
 	cout << endl << "Dealer Hand" << endl
