@@ -41,3 +41,9 @@ std::string loadFileIntoString(std::string fileName);
 void printVectorOfString(const std::vector<std::string> &items);
 
 std::string GenerateRandomFileName();
+
+bool AppendStringToFile(std::string filename, std::string text);
+
+bool WriteStringToFile(std::string text);
+
+bool WriteStringToFile(std::string filename, std::string text);

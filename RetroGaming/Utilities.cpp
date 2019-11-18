@@ -122,3 +122,21 @@ void printVectorOfString(const std::vector<std::string> &items)
 std::string GenerateRandomFileName(){
     return uuids::to_string(uuids::uuid_system_generator{}()) + ".txt";
 }
+
+bool AppendStringToFile(std::string filename, std::string text)
+{
+	// TODO: Add code to append the text to the supplied filename
+	return false;
+}
+
+bool WriteStringToFile(std::string text)
+{
+	// TODO: Add code to write the text to a brand new file, use the random GUID filename generator
+	return false;
+}
+
+bool WriteStringToFile(std::string filename, std::string text)
+{
+	// TODO: Add code to write the text (overwriting existing text) to the supplied filename
+	return false;
+}
