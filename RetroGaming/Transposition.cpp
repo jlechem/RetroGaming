@@ -90,8 +90,6 @@ string Transposition::EncryptString(string original)
 		result += newLetter;
 	}
 
-	auto writeResult = WriteTextToFile(result);
-
 	return result;
 }
 
@@ -102,8 +100,23 @@ string Transposition::DecryptString(string/*original*/)
 
 void Transposition::EncryptFile(string file, string destination)
 {
-	// TODO: Implement encrypt file
+	std::ofstream output(destination, std::ios::out | std::ios::trunc);
 
+	std::ifstream input(file, std::ios::in);
+
+	if (output.is_open() && input.is_open())
+	{
+		char currentLetter;
+
+		while (input.get(currentLetter))
+		{
+			auto encryptedLetter = GetEncryptedLetter(currentLetter);
+			output << encryptedLetter;
+		}
+
+		input.close();
+		output.close();
+	}
 }
 
 void Transposition::DecryptFile(string /*file*/)
