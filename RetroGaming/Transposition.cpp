@@ -24,36 +24,30 @@ Transposition::Transposition()
 	_name = "Transposition cipher";
 	_description = "Create a basic transposition cipher";
 
-	_letters[0] = 'A';
-	_letters[1] = 'B';
-	_letters[2] = 'C';
-	_letters[3] = 'D';
-	_letters[4] = 'E';
-	_letters[5] = 'F';
-	_letters[6] = 'G';
-	_letters[7] = 'H';
-	_letters[8] = 'I';
-	_letters[9] = 'J';
-	_letters[10] = 'K';
-	_letters[11] = 'L';
-	_letters[12] = 'M';
-	_letters[13] = 'N';
-	_letters[14] = 'O';
-	_letters[15] = 'P';
-	_letters[16] = 'Q';
-	_letters[17] = 'R';
-	_letters[18] = 'S';
-	_letters[19] = 'T';
-	_letters[20] = 'U';
-	_letters[21] = 'V';
-	_letters[22] = 'W';
-	_letters[23] = 'X';
-	_letters[24] = 'Y';
-	_letters[25] = 'Z';
+	_offset = getRandomNumber(0, 25);
+
+	BuildEncryptionMap();
+
 }
 
 Transposition::~Transposition()
 {
+}
+
+void Transposition::BuildEncryptionMap()
+{
+	string original = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+	for (auto i = 0; i < original.size(); i++)
+	{
+		auto newLetterIndex = i + _offset > 25 ?
+			_offset - (25 - i) :
+			i + _offset;
+
+		char originalLetter = original[i];
+
+		_encryptionMap[originalLetter] = original[newLetterIndex];
+	}
 }
 
 void Transposition::Play()
@@ -74,18 +68,24 @@ void Transposition::Play()
 
 }
 
-string Transposition::EncryptString(string original, int offset)
+void Transposition::UpdateOffset(int offset)
+{
+	if (_offset > 0 && offset < 26)
+	{
+		_offset = offset;
+
+		BuildEncryptionMap();
+
+	}
+}
+
+string Transposition::EncryptString(string original)
 {
 	string result;
 
-	if (offset == 0)
-	{
-		offset = getRandomNumber(0, 25);
-	}
-
 	for (const auto& letter : original)
 	{
-		auto newLetter = GetEncryptedLetter(letter, offset);
+		auto newLetter = GetEncryptedLetter(letter);
 		
 		result += newLetter;
 	}
@@ -95,66 +95,30 @@ string Transposition::EncryptString(string original, int offset)
 	return result;
 }
 
-string Transposition::DecryptString(string/*original*/, int offset)
+string Transposition::DecryptString(string/*original*/)
 {
-	if (offset == 0)
-	{
-		offset = getRandomNumber(1, 26);
-	}
-
 	return string();
 }
 
-void Transposition::EncryptFile(string file, string destination, int offset)
+void Transposition::EncryptFile(string file, string destination)
 {
-	if (offset == 0)
-	{
-		offset = getRandomNumber(1, 26);
-	}
-
 	// TODO: Implement encrypt file
 
 }
 
-void Transposition::DecryptFile(string /*file*/, int offset)
+void Transposition::DecryptFile(string /*file*/)
 {
-	if (offset == 0)
-	{
-		offset = getRandomNumber(1, 26);
-	}
 }
 
-int Transposition::GetLetterIndex(char letter)
+char Transposition::GetEncryptedLetter(char letter)
 {
-	auto index = -1;
+	char result = toupper(letter);
 
-	for (auto i = 0; i < 26; i++)
+	auto charResult = _encryptionMap.find(result);
+
+	if (charResult != _encryptionMap.end())
 	{
-		if (toupper(letter) == _letters[i])
-		{
-			index = i;
-			break;
-		}
-	}
-
-	return index;
-	
-}
-
-char Transposition::GetEncryptedLetter(char letter, int offset)
-{
-	auto currentLetterIndex = GetLetterIndex(letter);
-
-	auto result = letter;
-
-	if (currentLetterIndex >= 0)
-	{
-		auto newLetterIndex = currentLetterIndex + offset > 25 ?
-			offset - (25 - currentLetterIndex) :
-			currentLetterIndex + offset;
-
-		result = _letters[newLetterIndex];
-
+		result = charResult->second;
 	}
 
 	return result;

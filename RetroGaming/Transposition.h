@@ -19,6 +19,8 @@ limitations under the License.
 
 #pragma once
 
+#include <map>
+
 #include "GameBase.h"
 
 class Transposition :
@@ -30,17 +32,21 @@ public:
 
 	void Play() override;
 
+	void UpdateOffset(int offset = 0);
+
 private:
-	string EncryptString(string original, int offset = 0);
-	string DecryptString(string original, int offset = 0);
+	string EncryptString(string original);
+	string DecryptString(string original);
 
-	void EncryptFile(string file, string destination, int offset = 0);
-	void DecryptFile(string file, int offset = 0);
+	void EncryptFile(string file, string destination);
+	void DecryptFile(string file);
 
-	int GetLetterIndex(char letter);
-	
-	char GetEncryptedLetter(char letter, int offset);
-	
-	char _letters[26];
+	char GetEncryptedLetter(char letter);
+
+	void BuildEncryptionMap();
+
+	map<char, char> _encryptionMap;
+
+	int _offset;
 
 };
