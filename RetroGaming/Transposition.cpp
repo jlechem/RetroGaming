@@ -85,22 +85,9 @@ string Transposition::EncryptString(string original, int offset)
 
 	for (const auto& letter : original)
 	{
-		// get the index of the current letter
-		auto currentLetterIndex = GetLetterIndex(letter);
-
-		if (currentLetterIndex >= 0)
-		{
-			auto newLetterIndex = currentLetterIndex + offset > 25 ?
-				offset - (25 - currentLetterIndex) :
-				currentLetterIndex + offset;
-
-			result += _letters[newLetterIndex];
-
-		}
-		else
-		{
-			result += letter;
-		}
+		auto newLetter = GetEncryptedLetter(letter, offset);
+		
+		result += newLetter;
 	}
 
 	auto writeResult = WriteTextToFile(result);
@@ -118,12 +105,15 @@ string Transposition::DecryptString(string/*original*/, int offset)
 	return string();
 }
 
-void Transposition::EncryptFile(string /*file*/, int offset)
+void Transposition::EncryptFile(string file, string destination, int offset)
 {
 	if (offset == 0)
 	{
 		offset = getRandomNumber(1, 26);
 	}
+
+	// TODO: Implement encrypt file
+
 }
 
 void Transposition::DecryptFile(string /*file*/, int offset)
@@ -149,4 +139,24 @@ int Transposition::GetLetterIndex(char letter)
 
 	return index;
 	
+}
+
+char Transposition::GetEncryptedLetter(char letter, int offset)
+{
+	auto currentLetterIndex = GetLetterIndex(letter);
+
+	auto result = letter;
+
+	if (currentLetterIndex >= 0)
+	{
+		auto newLetterIndex = currentLetterIndex + offset > 25 ?
+			offset - (25 - currentLetterIndex) :
+			currentLetterIndex + offset;
+
+		result = _letters[newLetterIndex];
+
+	}
+
+	return result;
+
 }

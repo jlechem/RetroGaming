@@ -34,11 +34,13 @@ private:
 	string EncryptString(string original, int offset = 0);
 	string DecryptString(string original, int offset = 0);
 
-	void EncryptFile(string file, int offset = 0);
+	void EncryptFile(string file, string destination, int offset = 0);
 	void DecryptFile(string file, int offset = 0);
 
 	int GetLetterIndex(char letter);
-
+	
+	char GetEncryptedLetter(char letter, int offset);
+	
 	char _letters[26];
 
 };
