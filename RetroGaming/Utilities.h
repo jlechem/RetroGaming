@@ -42,8 +42,6 @@ void printVectorOfString(const std::vector<std::string> &items);
 
 std::string GenerateRandomFileName();
 
-bool AppendStringToFile(std::string filename, std::string text);
+bool WriteTextToFile(std::string text, std::string file, bool truncate = true);
 
-bool WriteStringToFile(std::string text);
-
-bool WriteStringToFile(std::string filename, std::string text);
+bool WriteTextToFile(std::string text, bool truncate = true);

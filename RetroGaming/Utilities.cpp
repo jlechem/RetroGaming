@@ -119,24 +119,71 @@ void printVectorOfString(const std::vector<std::string> &items)
 
 }
 
-std::string GenerateRandomFileName(){
+std::string GenerateRandomFileName()
+{
     return uuids::to_string(uuids::uuid_system_generator{}()) + ".txt";
 }
 
-bool AppendStringToFile(std::string filename, std::string text)
+bool WriteTextToFile(std::string text, std::string file, bool truncate)
 {
-	// TODO: Add code to append the text to the supplied filename
-	return false;
+	auto result = false;
+
+	std::ofstream outputFile;
+	
+	auto options = 0;
+
+	if (truncate)
+	{
+		options = std::ios::out | std::ios::trunc;
+	}
+	else
+	{
+		options = std::ios::out | std::ios::app;
+	}
+
+	outputFile.open(file, options);
+
+	if (outputFile.is_open())
+	{
+		outputFile << text << std::endl;
+		outputFile.close();
+
+		result = true;
+
+	}
+
+	return result;
 }
 
-bool WriteStringToFile(std::string text)
+bool WriteTextToFile(std::string text, bool truncate)
 {
-	// TODO: Add code to write the text to a brand new file, use the random GUID filename generator
-	return false;
-}
+	auto result = false;
 
-bool WriteStringToFile(std::string filename, std::string text)
-{
-	// TODO: Add code to write the text (overwriting existing text) to the supplied filename
-	return false;
+	std::ofstream outputFile;
+
+	auto file = GenerateRandomFileName();
+	
+	auto options = 0;
+
+	if (truncate)
+	{
+		options = std::ios::out | std::ios::trunc;
+	}
+	else
+	{
+		options = std::ios::out | std::ios::app;
+	}
+
+	outputFile.open(file, options);
+
+	if (outputFile.is_open())
+	{
+		outputFile << text << std::endl;
+		outputFile.close();
+
+		result = true;
+
+	}
+
+	return result;
 }

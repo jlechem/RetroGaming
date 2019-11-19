@@ -103,6 +103,8 @@ string Transposition::EncryptString(string original, int offset)
 		}
 	}
 
+	auto writeResult = WriteTextToFile(result);
+
 	return result;
 }
 
