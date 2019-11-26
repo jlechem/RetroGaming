@@ -17,11 +17,11 @@ limitations under the License.
 
  */
 
-#include "Transposition.h"
+#include "Substitution.h"
 
-Transposition::Transposition()
+Substitution::Substitution()
 {
-	_name = "Transposition cipher";
+	_name = "Substitution cipher";
 	_description = "Create a basic transposition cipher";
 
 	_offset = getRandomNumber(0, 25);
@@ -30,11 +30,11 @@ Transposition::Transposition()
 
 }
 
-Transposition::~Transposition()
+Substitution::~Substitution()
 {
 }
 
-void Transposition::BuildEncryptionMap()
+void Substitution::BuildEncryptionMap()
 {
 	string original = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -50,11 +50,11 @@ void Transposition::BuildEncryptionMap()
 	}
 }
 
-void Transposition::Play()
+void Substitution::Play()
 {
 	string text;
 
-	cout << "Welcome to Transposition cipher" << endl
+	cout << "Welcome to Substitution cipher" << endl
 		<< "This will take some text and randomly transpose the letters for you!" << endl << endl
 		<< "Enter text to transpose (alpha characters only [A-Z] will be transposed): " << flush;
 
@@ -68,7 +68,7 @@ void Transposition::Play()
 
 }
 
-void Transposition::UpdateOffset(int offset)
+void Substitution::UpdateOffset(int offset)
 {
 	if (_offset > 0 && offset < 26)
 	{
@@ -79,7 +79,7 @@ void Transposition::UpdateOffset(int offset)
 	}
 }
 
-string Transposition::EncryptString(string original)
+string Substitution::EncryptString(string original)
 {
 	string result;
 
@@ -93,12 +93,12 @@ string Transposition::EncryptString(string original)
 	return result;
 }
 
-string Transposition::DecryptString(string/*original*/)
+string Substitution::DecryptString(string/*original*/)
 {
 	return string();
 }
 
-void Transposition::EncryptFile(string file, string destination)
+void Substitution::EncryptFile(string file, string destination)
 {
 	std::ofstream output(destination, std::ios::out | std::ios::trunc);
 
@@ -119,11 +119,11 @@ void Transposition::EncryptFile(string file, string destination)
 	}
 }
 
-void Transposition::DecryptFile(string /*file*/)
+void Substitution::DecryptFile(string /*file*/)
 {
 }
 
-char Transposition::GetEncryptedLetter(char letter)
+char Substitution::GetEncryptedLetter(char letter)
 {
 	char result = toupper(letter);
 

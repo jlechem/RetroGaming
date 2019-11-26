@@ -23,12 +23,12 @@ limitations under the License.
 
 #include "GameBase.h"
 
-class Transposition :
+class Substitution :
 	public GameBase
 {
 public:
-	Transposition();
-	~Transposition();
+	Substitution();
+	~Substitution();
 
 	void Play() override;
 

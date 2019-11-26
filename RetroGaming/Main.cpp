@@ -30,7 +30,7 @@ limitations under the License.
 #include "NullCipher.h"
 #include "MonsterRats.h"
 #include "MontyHall.h"
-#include "Transposition.h"
+#include "Substitution.h"
 
 using namespace std;
 
@@ -89,8 +89,8 @@ vector<shared_ptr<GameBase>> GetGames()
 	auto montyHall = make_shared<MontyHall>();
 	games.push_back(std::move(montyHall));
 
-	auto transposition = make_shared<Transposition>();
-	games.push_back(std::move(transposition));
+	auto substitution = make_shared<Substitution>();
+	games.push_back(std::move(substitution));
 
 	return games;
 

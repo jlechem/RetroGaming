@@ -70,15 +70,6 @@
     <Filter Include="Crypto">
       <UniqueIdentifier>{584d3085-d58c-4ffe-8c8b-a56aa03bc187}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Crypto\Transposition">
-      <UniqueIdentifier>{971ebb3a-f337-425c-8697-5648a17d2f26}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Crypto\Transposition\Header Files">
-      <UniqueIdentifier>{6aca9bcb-78cb-4331-85f4-0dc5e0618cd8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Crypto\Transposition\Source Files">
-      <UniqueIdentifier>{8d88ce68-71eb-480d-9f9d-73ca1c5175ec}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Crypto\Null Cipher">
       <UniqueIdentifier>{3a7de55a-bd41-4dd9-a1d0-380a9522feba}</UniqueIdentifier>
     </Filter>
@@ -87,6 +78,15 @@
     </Filter>
     <Filter Include="Crypto\Null Cipher\Source Files">
       <UniqueIdentifier>{90053d80-9fba-48af-96ff-57ee5cd92371}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crypto\Substitution">
+      <UniqueIdentifier>{971ebb3a-f337-425c-8697-5648a17d2f26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crypto\Substitution\Header Files">
+      <UniqueIdentifier>{6aca9bcb-78cb-4331-85f4-0dc5e0618cd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crypto\Substitution\Source Files">
+      <UniqueIdentifier>{8d88ce68-71eb-480d-9f9d-73ca1c5175ec}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -135,14 +135,14 @@
     <ClCompile Include="MontyHall.cpp">
       <Filter>Monty Hall\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Transposition.cpp">
-      <Filter>Crypto\Transposition\Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Rat.cpp">
       <Filter>Genetic Rats\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="NullCipher.cpp">
       <Filter>Crypto\Null Cipher\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Substitution.cpp">
+      <Filter>Crypto\Substitution\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -194,9 +194,6 @@
     <ClInclude Include="MontyHall.h">
       <Filter>Monty Hall\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Transposition.h">
-      <Filter>Crypto\Transposition\Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Rat.h">
       <Filter>Genetic Rats\Header Files</Filter>
     </ClInclude>
@@ -205,6 +202,9 @@
     </ClInclude>
     <ClInclude Include="uuid.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Substitution.h">
+      <Filter>Crypto\Substitution\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
