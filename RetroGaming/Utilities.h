@@ -45,3 +45,5 @@ std::string GenerateRandomFileName();
 bool WriteTextToFile(std::string text, std::string file, bool truncate = true);
 
 bool WriteTextToFile(std::string text, bool truncate = true);
+
+bool WriteVectorToFile(std::shared_ptr<std::vector<std::string>>, std::string, bool truncate = true);

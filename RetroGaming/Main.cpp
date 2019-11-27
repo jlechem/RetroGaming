@@ -31,6 +31,7 @@ limitations under the License.
 #include "MonsterRats.h"
 #include "MontyHall.h"
 #include "Substitution.h"
+#include "RailFence.h"
 
 using namespace std;
 
@@ -91,6 +92,9 @@ vector<shared_ptr<GameBase>> GetGames()
 
 	auto substitution = make_shared<Substitution>();
 	games.push_back(std::move(substitution));
+
+	auto fence = make_shared<RailFence>();
+	games.push_back(std::move(fence));
 
 	return games;
 

@@ -167,6 +167,7 @@
     <ClCompile Include="BeerRun.cpp" />
     <ClCompile Include="BlackJack.cpp" />
     <ClCompile Include="Card.cpp" />
+    <ClCompile Include="CryptoBase.cpp" />
     <ClCompile Include="Deck.cpp" />
     <ClCompile Include="GameBase.cpp" />
     <ClCompile Include="GuessTheNumber.cpp" />
@@ -177,6 +178,7 @@
     <ClCompile Include="NullCipher.cpp" />
     <ClCompile Include="Palindromes.cpp" />
     <ClCompile Include="Psuedonym.cpp" />
+    <ClCompile Include="RailFence.cpp" />
     <ClCompile Include="Rat.cpp" />
     <ClCompile Include="Snake.cpp" />
     <ClCompile Include="Substitution.cpp" />
@@ -188,6 +190,7 @@
     <ClInclude Include="BlackJack.h" />
     <ClInclude Include="Card.h" />
     <ClInclude Include="CardSuites.h" />
+    <ClInclude Include="CryptoBase.h" />
     <ClInclude Include="Deck.h" />
     <ClInclude Include="GameBase.h" />
     <ClInclude Include="GuessTheNumber.h" />
@@ -197,6 +200,7 @@
     <ClInclude Include="NullCipher.h" />
     <ClInclude Include="Palindromes.h" />
     <ClInclude Include="Psuedonym.h" />
+    <ClInclude Include="RailFence.h" />
     <ClInclude Include="Rat.h" />
     <ClInclude Include="RatGenders.h" />
     <ClInclude Include="Snake.h" />

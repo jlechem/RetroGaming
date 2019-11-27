@@ -130,16 +130,7 @@ bool WriteTextToFile(std::string text, std::string file, bool truncate)
 
 	std::ofstream outputFile;
 	
-	auto options = 0;
-
-	if (truncate)
-	{
-		options = std::ios::out | std::ios::trunc;
-	}
-	else
-	{
-		options = std::ios::out | std::ios::app;
-	}
+	auto options = truncate ? std::ios::out | std::ios::trunc : std::ios::out | std::ios::app;
 
 	outputFile.open(file, options);
 
@@ -163,22 +154,39 @@ bool WriteTextToFile(std::string text, bool truncate)
 
 	auto file = GenerateRandomFileName();
 	
-	auto options = 0;
-
-	if (truncate)
-	{
-		options = std::ios::out | std::ios::trunc;
-	}
-	else
-	{
-		options = std::ios::out | std::ios::app;
-	}
+	auto options = truncate ? std::ios::out | std::ios::trunc : std::ios::out | std::ios::app;
 
 	outputFile.open(file, options);
 
 	if (outputFile.is_open())
 	{
 		outputFile << text << std::endl;
+		outputFile.close();
+
+		result = true;
+
+	}
+
+	return result;
+}
+
+bool WriteVectorToFile(std::shared_ptr<std::vector<std::string>> items, std::string filename, bool truncate)
+{
+	auto result = false;
+
+	std::ofstream outputFile;
+
+	auto options = truncate ? std::ios::out | std::ios::trunc : std::ios::out | std::ios::app;
+	
+	outputFile.open(filename, options);
+
+	if (outputFile.is_open())
+	{
+		for (const auto& item : *items)
+		{
+			outputFile << item << std::endl;
+		}
+
 		outputFile.close();
 
 		result = true;

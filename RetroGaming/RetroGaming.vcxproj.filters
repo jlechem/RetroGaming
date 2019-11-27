@@ -88,6 +88,21 @@
     <Filter Include="Crypto\Substitution\Source Files">
       <UniqueIdentifier>{8d88ce68-71eb-480d-9f9d-73ca1c5175ec}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Crypto\RailFence">
+      <UniqueIdentifier>{14af726e-fe09-417f-b89e-9f426cd6eace}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crypto\RailFence\Header Files">
+      <UniqueIdentifier>{64b20ab4-99cb-4673-a56f-759ac5fb73d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crypto\RailFence\Source Files">
+      <UniqueIdentifier>{2a9eb64a-1616-492b-8774-72ce105ee7c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crypto\Header Files">
+      <UniqueIdentifier>{27654eac-5310-4d9d-8946-a8a0c2722745}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crypto\Source Files">
+      <UniqueIdentifier>{3ece246c-ffed-4ec0-919e-3f4de6ecd4b0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GuessTheNumber.cpp">
@@ -143,6 +158,12 @@
     </ClCompile>
     <ClCompile Include="Substitution.cpp">
       <Filter>Crypto\Substitution\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RailFence.cpp">
+      <Filter>Crypto\RailFence\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CryptoBase.cpp">
+      <Filter>Crypto\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -205,6 +226,12 @@
     </ClInclude>
     <ClInclude Include="Substitution.h">
       <Filter>Crypto\Substitution\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RailFence.h">
+      <Filter>Crypto\RailFence\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CryptoBase.h">
+      <Filter>Crypto\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
