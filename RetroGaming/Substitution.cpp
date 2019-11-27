@@ -24,30 +24,12 @@ Substitution::Substitution()
 	_name = "Substitution cipher";
 	_description = "Create a basic transposition cipher";
 
-	_offset = getRandomNumber(0, 25);
-
-	BuildEncryptionMap();
+	_offset = getRandomNumber(MIN_ASCII_VALUE, MAX_ASCII_VALUE);
 
 }
 
 Substitution::~Substitution()
 {
-}
-
-void Substitution::BuildEncryptionMap()
-{
-	string original = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-	for (auto i = 0; i < original.size(); i++)
-	{
-		auto newLetterIndex = i + _offset > 25 ?
-			_offset - (25 - i) :
-			i + _offset;
-
-		char originalLetter = original[i];
-
-		_encryptionMap[originalLetter] = original[newLetterIndex];
-	}
 }
 
 void Substitution::Play()
@@ -64,17 +46,17 @@ void Substitution::Play()
 
 	auto transposedText = EncryptString(text);
 
+	auto writeFileResult = WriteTextToFile(transposedText, "D:\\RetroGaming\\Substitution.txt", false);
+
 	cout << endl << "The transposed(encrypted) text is: " << transposedText << endl;
 
-}
+} 
 
 void Substitution::UpdateOffset(int offset)
 {
-	if (_offset > 0 && offset < 26)
+	if (_offset >= MIN_ASCII_VALUE && offset <= MAX_ASCII_VALUE)
 	{
 		_offset = offset;
-
-		BuildEncryptionMap();
 
 	}
 }
@@ -125,13 +107,29 @@ void Substitution::DecryptFile(string /*file*/)
 
 char Substitution::GetEncryptedLetter(char letter)
 {
-	char result = toupper(letter);
+	char result;
 
-	auto charResult = _encryptionMap.find(result);
+	auto asciiValue = static_cast<int>(letter);
 
-	if (charResult != _encryptionMap.end())
+	if (asciiValue >= MIN_ASCII_VALUE && asciiValue <= MAX_ASCII_VALUE)
 	{
-		result = charResult->second;
+		auto newAsciiValue = MIN_ASCII_VALUE;
+
+		if (_offset + asciiValue > MAX_ASCII_VALUE)
+		{
+			newAsciiValue = MIN_ASCII_VALUE + (_offset - (MAX_ASCII_VALUE - asciiValue));
+		}
+		else
+		{
+			newAsciiValue = asciiValue + _offset;
+		}
+
+		result = static_cast<char>(newAsciiValue);
+
+	}
+	else
+	{
+		result = letter;
 	}
 
 	return result;

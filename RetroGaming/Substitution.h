@@ -23,6 +23,9 @@ limitations under the License.
 
 #include "GameBase.h"
 
+constexpr auto MIN_ASCII_VALUE = 20;
+constexpr auto MAX_ASCII_VALUE = 126;
+
 class Substitution :
 	public GameBase
 {
@@ -42,10 +45,6 @@ private:
 	void DecryptFile(string file);
 
 	char GetEncryptedLetter(char letter);
-
-	void BuildEncryptionMap();
-
-	map<char, char> _encryptionMap;
 
 	int _offset;
 
