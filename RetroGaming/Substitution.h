@@ -31,6 +31,7 @@ class Substitution :
 {
 public:
 	Substitution();
+	Substitution(int);
 	~Substitution();
 
 	void Play() override;

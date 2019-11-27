@@ -28,6 +28,14 @@ Substitution::Substitution()
 
 }
 
+Substitution::Substitution(int offset)
+{
+	_name = "Substitution cipher";
+	_description = "Create a basic transposition cipher";
+
+	_offset = offset >= MIN_ASCII_VALUE && offset <= MAX_ASCII_VALUE ? offset : getRandomNumber(MIN_ASCII_VALUE, MAX_ASCII_VALUE);
+}
+
 Substitution::~Substitution()
 {
 }
@@ -57,7 +65,6 @@ void Substitution::UpdateOffset(int offset)
 	if (_offset >= MIN_ASCII_VALUE && offset <= MAX_ASCII_VALUE)
 	{
 		_offset = offset;
-
 	}
 }
 
