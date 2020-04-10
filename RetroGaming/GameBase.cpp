@@ -30,7 +30,7 @@ GameBase::~GameBase()
 {
 }
 
-void GameBase::Play()
+void GameBase::play()
 {
 
 }

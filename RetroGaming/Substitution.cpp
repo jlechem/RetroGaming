@@ -40,7 +40,7 @@ Substitution::~Substitution()
 {
 }
 
-void Substitution::Play()
+void Substitution::play()
 {
 	string text;
 

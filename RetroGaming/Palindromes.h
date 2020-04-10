@@ -28,6 +28,6 @@ public:
 	Palindromes();
 	~Palindromes();
 
-	void Play() override;
+	void play() override;
 
 };

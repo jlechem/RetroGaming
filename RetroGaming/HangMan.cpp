@@ -29,7 +29,7 @@ HangMan::~HangMan()
 {
 }
 
-void HangMan::Play()
+void HangMan::play()
 {
 	cout << "You Win" << endl;
 }

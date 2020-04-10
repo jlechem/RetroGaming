@@ -30,7 +30,7 @@ Palindromes::~Palindromes()
 {
 }
 
-void Palindromes::Play()
+void Palindromes::play()
 {
 	auto words = loadWords("C:/Users/ENSN/Documents/words.txt");
 

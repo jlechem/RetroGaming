@@ -221,9 +221,6 @@
     <ClInclude Include="NullCipher.h">
       <Filter>Crypto\Null Cipher\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="uuid.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Substitution.h">
       <Filter>Crypto\Substitution\Header Files</Filter>
     </ClInclude>

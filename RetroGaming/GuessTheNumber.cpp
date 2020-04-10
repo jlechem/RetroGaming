@@ -27,7 +27,7 @@ GuessTheNumber::~GuessTheNumber()
 {
 }
 
-void GuessTheNumber::Play()
+void GuessTheNumber::play()
 {
 	cout << "Welcome to guess the number" << endl << endl
 		<< "Your goal is to guess the number between 1 and 100 in 10 tries or less" << endl << endl;

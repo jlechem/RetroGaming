@@ -28,6 +28,6 @@ public:
 	HangMan();
 	~HangMan();
 
-	void Play() override;
+	void play() override;
 
 };

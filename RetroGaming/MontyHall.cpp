@@ -29,7 +29,7 @@ MontyHall::~MontyHall()
 {
 }
 
-void MontyHall::Play()
+void MontyHall::play()
 {
 	auto iterations = 1000000;
 

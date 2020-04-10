@@ -29,7 +29,7 @@ BeerRun::~BeerRun()
 {
 }
 
-void BeerRun::Play()
+void BeerRun::play()
 {
 	cout << "Beer Run" << endl;
 }

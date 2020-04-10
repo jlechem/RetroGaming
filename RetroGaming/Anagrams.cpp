@@ -29,7 +29,7 @@ Anagrams::~Anagrams()
 {
 }
 
-void Anagrams::Play()
+void Anagrams::play()
 {
  	string enteredWord;
 

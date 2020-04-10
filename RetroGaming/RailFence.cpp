@@ -41,7 +41,7 @@ RailFence::~RailFence()
 {
 }
 
-void RailFence::Play()
+void RailFence::play()
 {
 	cout << "Welcome to Rail Fence Cipher!" << endl
 		<< "This program will take input and encrypt it using a Rail Fence technique." << endl

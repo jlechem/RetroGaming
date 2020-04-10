@@ -29,7 +29,7 @@ BlackJack::~BlackJack()
 {
 }
 
-void BlackJack::Play()
+void BlackJack::play()
 {
 	auto bet = 0;
 	auto maxBet = 25;

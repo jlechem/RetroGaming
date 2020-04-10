@@ -18,7 +18,7 @@ limitations under the License.
  */
 
 #include "Utilities.h"
-#include "uuid.h"
+//#include "uuid.h"
 
 int getRandomIndex(long max)
 {
@@ -121,7 +121,7 @@ void printVectorOfString(const std::vector<std::string> &items)
 
 std::string GenerateRandomFileName()
 {
-    return uuids::to_string(uuids::uuid_system_generator{}()) + ".txt";
+    return "GUID.txt";
 }
 
 bool WriteTextToFile(std::string text, std::string file, bool truncate)

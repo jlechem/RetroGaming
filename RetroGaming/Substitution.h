@@ -34,7 +34,7 @@ public:
 	Substitution(int);
 	~Substitution();
 
-	void Play() override;
+	void play() override;
 
 	void UpdateOffset(int offset = 0);
 

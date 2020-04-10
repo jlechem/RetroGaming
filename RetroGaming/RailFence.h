@@ -32,7 +32,7 @@ public:
 	RailFence(unsigned int, unsigned int);
 	~RailFence();
 
-	void Play() override;
+	void play() override;
 
 private:
 	int _rows;

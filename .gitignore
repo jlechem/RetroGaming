@@ -74,3 +74,8 @@ RetroGaming/eaee2cc4-5ce3-46ec-8c96-51178ba76c22.txt
 RetroGaming/837254f0-26b6-4fc9-a745-bab4304df6ca.txt
 RetroGaming/367f153c-1e68-4ce1-a529-423975797b2a.txt
 RetroGaming/random.txt
+RetroGaming/x64/Debug/vc142.pdb
+*.idb
+.vs/RetroGaming/v16/.suo
+*.db
+*.opendb

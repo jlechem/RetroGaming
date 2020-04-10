@@ -29,7 +29,7 @@ NullCipher::~NullCipher()
 {
 }
 
-void NullCipher::Play()
+void NullCipher::play()
 {
 	cout << "Welcome to Null Cipher" << endl << endl
 		<< "Enter file to decrypt: ";

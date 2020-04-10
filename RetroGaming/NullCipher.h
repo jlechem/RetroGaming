@@ -28,7 +28,7 @@ public:
 	NullCipher();
 	~NullCipher();
 
-	void Play() override;
+	void play() override;
 
 private:
 	string _fileText;

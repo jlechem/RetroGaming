@@ -28,7 +28,7 @@ public:
 	Psuedonym();
 	~Psuedonym();
 
-	void Play() override;
+	void play() override;
 
 private:
 	vector<string> _firstNames;

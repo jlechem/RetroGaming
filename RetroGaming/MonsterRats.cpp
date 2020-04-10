@@ -29,7 +29,7 @@ MonsterRats::~MonsterRats()
 {
 }
 
-void MonsterRats::Play()
+void MonsterRats::play()
 {
 }
 

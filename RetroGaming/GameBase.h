@@ -35,7 +35,7 @@ public:
 	GameBase();
 	virtual ~GameBase();
 
-	virtual void Play();
+	virtual void play();
 
 	std::string getDescription();
 	

@@ -27,7 +27,7 @@ Snake::~Snake()
 {
 }
 
-void Snake::Play()
+void Snake::play()
 {
 
 }

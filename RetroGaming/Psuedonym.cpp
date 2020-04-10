@@ -29,7 +29,7 @@ Psuedonym::~Psuedonym()
 {
 }
 
-void Psuedonym::Play()
+void Psuedonym::play()
 {
 	loadFirstNames();
 	loadSecondNames();
