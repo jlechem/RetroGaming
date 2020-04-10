@@ -35,10 +35,9 @@ limitations under the License.
 
 using namespace std;
 
-vector<shared_ptr<GameBase>> GetGames();
-void PrintNames(vector<shared_ptr<GameBase>> games);
-shared_ptr<GameBase> GetGameToPlay();
-
+vector<unique_ptr<GameBase>> GetGames();
+void PrintNames(vector<unique_ptr<GameBase>>& games);
+unique_ptr<GameBase> GetGameToPlay();
 
 int main()
 {
@@ -54,65 +53,65 @@ int main()
 
 
 // FUNCTIONS
-vector<shared_ptr<GameBase>> GetGames()
+vector<unique_ptr<GameBase>> GetGames()
 {
-	vector<shared_ptr<GameBase>> games;
+	vector<unique_ptr<GameBase>> games;
 
 	// TODO: Find a way to load these in a DI like manner
 
-	auto guessTheNumber = make_shared<GuessTheNumber>();
+	auto guessTheNumber = make_unique<GuessTheNumber>();
 	games.push_back(std::move(guessTheNumber));
 
-	auto hangman = make_shared<HangMan>();
+	auto hangman = make_unique<HangMan>();
 	games.push_back(std::move(hangman));
 
-	auto beerrun = make_shared<BeerRun>();
+	auto beerrun = make_unique<BeerRun>();
 	games.push_back(std::move(beerrun));
 
-	auto blackjack = make_shared<BlackJack>();
+	auto blackjack = make_unique<BlackJack>();
 	games.push_back(std::move(blackjack));
 
-	auto psuedonyme = make_shared<Psuedonym>();
+	auto psuedonyme = make_unique<Psuedonym>();
 	games.push_back(std::move(psuedonyme));
 
-	auto palindromes = make_shared<Palindromes>();
+	auto palindromes = make_unique<Palindromes>();
 	games.push_back(std::move(palindromes));
 
-	auto anagrams = make_shared<Anagrams>();
+	auto anagrams = make_unique<Anagrams>();
 	games.push_back(std::move(anagrams));
 
-	auto null_cipher = make_shared<NullCipher>();
+	auto null_cipher = make_unique<NullCipher>();
 	games.push_back(std::move(null_cipher));
 
-	auto rats = make_shared<MonsterRats>();
+	auto rats = make_unique<MonsterRats>();
 	games.push_back(std::move(rats));
 
-	auto montyHall = make_shared<MontyHall>();
+	auto montyHall = make_unique<MontyHall>();
 	games.push_back(std::move(montyHall));
 
-	auto substitution = make_shared<Substitution>();
+	auto substitution = make_unique<Substitution>();
 	games.push_back(std::move(substitution));
 
-	auto fence = make_shared<RailFence>();
+	auto fence = make_unique<RailFence>();
 	games.push_back(std::move(fence));
 
 	return games;
 
 }
 
-void PrintNames(vector<shared_ptr<GameBase>> games)
+void PrintNames(vector<unique_ptr<GameBase>>& games)
 {
 	auto counter = 1;
 
 	cout << "Select a game" << endl << endl;
 	
-	for(const auto& game: games)
+	for (const auto& game : games)
 	{
 		cout << "(" << counter++ << ") " << game->getName() << endl;
 	}
 }
 
-shared_ptr<GameBase> GetGameToPlay()
+unique_ptr<GameBase> GetGameToPlay()
 {
 	auto games = GetGames();
 
@@ -141,6 +140,6 @@ shared_ptr<GameBase> GetGameToPlay()
 		}
 	} while (!validChoice);
 	
-	return games[index - 1];
+	return std::move(games.operator[](index - 1));
 
 }

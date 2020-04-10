@@ -32,7 +32,7 @@ void GuessTheNumber::play()
 	cout << "Welcome to guess the number" << endl << endl
 		<< "Your goal is to guess the number between 1 and 100 in 10 tries or less" << endl << endl;
 
-	int numberOfTries = 0;
+	int numberOfTries = 1;
 	int numberToGuess = getRandomIndex(100);
 	int maxNumberOfTries = 10;
 	int currentGuess = 0;
