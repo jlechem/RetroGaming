@@ -35,9 +35,9 @@ limitations under the License.
 
 using namespace std;
 
-vector<GameBase> GetGames();
-void PrintNames(vector<GameBase> games);
-GameBase GetGameToPlay();
+vector<shared_ptr<GameBase>> GetGames();
+void PrintNames(vector<shared_ptr<GameBase>> games);
+shared_ptr<GameBase> GetGameToPlay();
 
 
 int main()
@@ -46,7 +46,7 @@ int main()
 	
 	cout << endl << endl;
 
-	gameToPlay.play();
+	gameToPlay->play();
 
 	return 0;
 
@@ -54,65 +54,65 @@ int main()
 
 
 // FUNCTIONS
-vector<GameBase> GetGames()
+vector<shared_ptr<GameBase>> GetGames()
 {
-	vector<GameBase> games;
+	vector<shared_ptr<GameBase>> games;
 
 	// TODO: Find a way to load these in a DI like manner
 
-	auto guessTheNumber = GuessTheNumber();
-	games.push_back(guessTheNumber);
+	auto guessTheNumber = make_shared<GuessTheNumber>();
+	games.push_back(std::move(guessTheNumber));
 
-	auto hangman = HangMan();
-	games.push_back(hangman);
+	auto hangman = make_shared<HangMan>();
+	games.push_back(std::move(hangman));
 
-	auto beerrun = BeerRun();
-	games.push_back(beerrun);
+	auto beerrun = make_shared<BeerRun>();
+	games.push_back(std::move(beerrun));
 
-	auto blackjack = BlackJack();
-	games.push_back(blackjack);
+	auto blackjack = make_shared<BlackJack>();
+	games.push_back(std::move(blackjack));
 
-	auto psuedonyme = Psuedonym();
-	games.push_back(psuedonyme);
+	auto psuedonyme = make_shared<Psuedonym>();
+	games.push_back(std::move(psuedonyme));
 
-	auto palindromes = Palindromes();
-	games.push_back(palindromes);
+	auto palindromes = make_shared<Palindromes>();
+	games.push_back(std::move(palindromes));
 
-	auto anagrams = Anagrams();
-	games.push_back(anagrams);
+	auto anagrams = make_shared<Anagrams>();
+	games.push_back(std::move(anagrams));
 
-	auto null_cipher = NullCipher();
-	games.push_back(null_cipher);
+	auto null_cipher = make_shared<NullCipher>();
+	games.push_back(std::move(null_cipher));
 
-	auto rats = MonsterRats();
-	games.push_back(rats);
+	auto rats = make_shared<MonsterRats>();
+	games.push_back(std::move(rats));
 
-	auto montyHall = MontyHall();
-	games.push_back(montyHall);
+	auto montyHall = make_shared<MontyHall>();
+	games.push_back(std::move(montyHall));
 
-	auto substitution = Substitution();
-	games.push_back(substitution);
+	auto substitution = make_shared<Substitution>();
+	games.push_back(std::move(substitution));
 
-	auto fence = RailFence();
-	games.push_back(fence);
+	auto fence = make_shared<RailFence>();
+	games.push_back(std::move(fence));
 
 	return games;
 
 }
 
-void PrintNames(vector<GameBase> games)
+void PrintNames(vector<shared_ptr<GameBase>> games)
 {
 	auto counter = 1;
 
 	cout << "Select a game" << endl << endl;
 	
-	for (auto it = games.begin(); it != games.end(); it++)
+	for(const auto& game: games)
 	{
-		cout << "(" << counter++ << ") " << (*it).getName() << endl;
+		cout << "(" << counter++ << ") " << game->getName() << endl;
 	}
 }
 
-GameBase GetGameToPlay()
+shared_ptr<GameBase> GetGameToPlay()
 {
 	auto games = GetGames();
 
