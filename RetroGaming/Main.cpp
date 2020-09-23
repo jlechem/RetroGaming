@@ -32,6 +32,7 @@ limitations under the License.
 #include "MontyHall.h"
 #include "Substitution.h"
 #include "RailFence.h"
+#include "Board.h"
 
 using namespace std;
 
@@ -94,6 +95,9 @@ vector<unique_ptr<GameBase>> GetGames()
 
 	auto fence = make_unique<RailFence>();
 	games.push_back(std::move(fence));
+
+	auto board = make_unique<Board>();
+	games.push_back(std::move(board));
 
 	return games;
 

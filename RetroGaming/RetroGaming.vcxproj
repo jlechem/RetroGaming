@@ -166,6 +166,7 @@
     <ClCompile Include="Anagrams.cpp" />
     <ClCompile Include="BeerRun.cpp" />
     <ClCompile Include="BlackJack.cpp" />
+    <ClCompile Include="Board.cpp" />
     <ClCompile Include="Card.cpp" />
     <ClCompile Include="CryptoBase.cpp" />
     <ClCompile Include="Deck.cpp" />
@@ -188,6 +189,7 @@
     <ClInclude Include="Anagrams.h" />
     <ClInclude Include="BeerRun.h" />
     <ClInclude Include="BlackJack.h" />
+    <ClInclude Include="Board.h" />
     <ClInclude Include="Card.h" />
     <ClInclude Include="CardSuites.h" />
     <ClInclude Include="CryptoBase.h" />
