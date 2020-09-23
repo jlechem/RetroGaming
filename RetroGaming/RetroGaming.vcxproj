@@ -178,6 +178,7 @@
     <ClCompile Include="MontyHall.cpp" />
     <ClCompile Include="NullCipher.cpp" />
     <ClCompile Include="Palindromes.cpp" />
+    <ClCompile Include="Pong.cpp" />
     <ClCompile Include="Psuedonym.cpp" />
     <ClCompile Include="RailFence.cpp" />
     <ClCompile Include="Rat.cpp" />
@@ -201,6 +202,7 @@
     <ClInclude Include="MontyHall.h" />
     <ClInclude Include="NullCipher.h" />
     <ClInclude Include="Palindromes.h" />
+    <ClInclude Include="Pong.h" />
     <ClInclude Include="Psuedonym.h" />
     <ClInclude Include="RailFence.h" />
     <ClInclude Include="Rat.h" />

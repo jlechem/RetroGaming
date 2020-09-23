@@ -33,6 +33,7 @@ limitations under the License.
 #include "Substitution.h"
 #include "RailFence.h"
 #include "Board.h"
+#include "Pong.h"
 
 using namespace std;
 
@@ -98,6 +99,9 @@ vector<unique_ptr<GameBase>> GetGames()
 
 	auto board = make_unique<Board>();
 	games.push_back(std::move(board));
+
+	auto pong = make_unique<Pong>();
+	games.push_back(std::move(pong));
 
 	return games;
 

@@ -112,6 +112,15 @@
     <Filter Include="BoardGames\SourceFiles">
       <UniqueIdentifier>{096a71b8-9200-426e-8b7e-7a0cb12f1a07}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pong">
+      <UniqueIdentifier>{3d81d572-f2b5-409c-83e3-8790fda9ee56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pong\Header Files">
+      <UniqueIdentifier>{9b3eec50-3f2e-482e-b622-d2c5b6026296}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pong\Source Files">
+      <UniqueIdentifier>{ccf86c5a-679f-42d3-a904-8f038b7e9f19}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GuessTheNumber.cpp">
@@ -176,6 +185,9 @@
     </ClCompile>
     <ClCompile Include="Board.cpp">
       <Filter>BoardGames\SourceFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Pong.cpp">
+      <Filter>Pong\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -244,6 +256,9 @@
     </ClInclude>
     <ClInclude Include="Board.h">
       <Filter>BoardGames\HeaderFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Pong.h">
+      <Filter>Pong\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
